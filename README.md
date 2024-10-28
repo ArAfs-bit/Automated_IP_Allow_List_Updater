@@ -71,7 +71,7 @@ with open(import_file, "w") as file:
    ![Remove IP addresses that are on the remove list](Screenshots/Removing_IP_Addresses.png)
 
 6. **Update the file with the revised list of IP addresses**:  
-   ![Update the file with the revised list of IP addresses](Screenshots/Updating_File_with_Revised_IP_List.png)
+   ![Update the file with the revised list of IP addresses](Screenshots/Updating_with_Revised_IP.png)
 
 ## Prerequisites
 

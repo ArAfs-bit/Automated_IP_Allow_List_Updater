@@ -24,27 +24,25 @@ As part of my job, I regularly update files that determine which employees can a
 ## Code Overview
 ```python
 # Step 1: Open the allow list file
-with open("allow_list.txt", "r") as import_file:
-    ip_addresses = import_file.read()
+import_file = "allow_list.txt"
+with open(import_file, "r") as file:
 
 # Step 2: Read the file contents
 with open(import_file, "r") as file:
-ip_addresses = file.read()
+    ip_addresses = file.read()
 
 # Step 3: Convert string to list
 ip_addresses = ip_addresses.split()
 
 # Step 4: Iterate through the remove list
 with open("remove_list.txt", "r") as remove_file:
-    for element in remove_file:
-        element = element.strip()
-        # Step 4: Remove IP addresses in remove list from allow list
+    for element in remove_list:
+        
+ # Step 5: Remove IP addresses in remove list from allow list
         if element in ip_addresses:
             ip_addresses.remove(element)
-# Step 5: Remove IP addresses that are on the remove list
-if element in ip_addresses:
-    ip_addresses.remove(element)
 
 # Step 6: Update the file with the revised IP addresses
-with open("allow_list.txt", "w") as import_file:
-    import_file.write("\n".join(ip_addresses))
+ip_addresses = "\n".join(ip_addresses)
+with open(import_file, "w") as file:
+    file.write(ip_addresses)

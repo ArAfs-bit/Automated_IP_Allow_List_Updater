@@ -38,7 +38,7 @@ ip_addresses = ip_addresses.split()
 with open("remove_list.txt", "r") as remove_file:
     for element in remove_list:
         
- # Step 5: Remove IP addresses in remove list from allow list
+# Step 5: Remove IP addresses in remove list from allow list
         if element in ip_addresses:
             ip_addresses.remove(element)
 

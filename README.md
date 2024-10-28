@@ -25,6 +25,34 @@ As part of my job, I regularly update files that determine which employees can a
 5. **Remove IP Addresses from Allow List**: If an IP from the remove list is found in the allow list, it is removed using `.remove()`.
 6. **Update with Revised IP**: Converts the updated list of IP addresses back to a string, separating each IP by a newline, and writes it back to `allow_list.txt`.
 
+## Code Overview
+
+```python
+# Step 1: Open the allow list file
+import_file = "allow_list.txt"
+with open(import_file, "r") as file:
+
+# Step 2: Read the file contents
+with open(import_file, "r") as file:
+    ip_addresses = file.read()
+
+# Step 3: Convert string to list
+ip_addresses = ip_addresses.split()
+
+# Step 4: Iterate through the remove list
+with open("remove_list.txt", "r") as remove_file:
+    for element in remove_file:
+   
+# Step 5: Remove IP addresses in remove list from allow list
+        if element in ip_addresses:
+            ip_addresses.remove(element)
+
+# Step 6: Update the file with the revised IP addresses
+ip_addresses = "\n".join(ip_addresses)
+with open(import_file, "w") as file:
+    file.write(ip_addresses)
+```
+
 ## Screenshots
 
 1. **Open the file that contains the allow list**:  

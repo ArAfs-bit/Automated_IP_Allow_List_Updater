@@ -2,7 +2,7 @@
 
 ## Project Description
 
-As part of my job, I regularly update files that determine which employees can access restricted content based on their IP addresses. This project automates the process by updating an IP allow list, removing specific IP addresses from an external remove list, and rewriting the allow list with only approved IPs.
+This project automates the process of updating an IP allow list by removing unauthorized IP addresses. It’s especially useful for organizations that need to maintain restricted content access. The algorithm reads from an allow list file and a remove list, iterates through both, and updates the allow list by removing IP addresses in the remove list.
 
 ## Features
 
